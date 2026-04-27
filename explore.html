@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>마리아나 해구 — 심해 탐험</title>
+  <link rel="stylesheet" href="explore.css"/>
+</head>
+<body>
+<div id="wrap">
+
+  <canvas id="gc"></canvas>
+
+  <!-- 상단 네비 -->
+  <div id="topBar">
+    <a href="index.html" class="back-btn">← 돌아가기</a>
+    <div class="top-title">🌊 마리아나 해구 심해 탐험</div>
+    <div class="top-hint">스크롤 · 방향키로 탐험</div>
+  </div>
+
+  <!-- 좌측 수심 바 -->
+  <div id="depthBar">
+    <div class="db-label">수면</div>
+    <div class="db-track">
+      <div class="db-fill"  id="dbFill"></div>
+      <div class="db-dot"   id="dbDot"></div>
+      <div class="db-mark" style="top:0%"   data-d="0m"></div>
+      <div class="db-mark" style="top:18%"  data-d="200m"></div>
+      <div class="db-mark" style="top:36%"  data-d="1,000m"></div>
+      <div class="db-mark" style="top:54%"  data-d="4,000m"></div>
+      <div class="db-mark" style="top:72%"  data-d="6,000m"></div>
+      <div class="db-mark" style="top:90%"  data-d="11,000m"></div>
+    </div>
+    <div class="db-label">해저</div>
+  </div>
+
+  <!-- 우측 상태창 -->
+  <div id="statusPanel">
+    <div class="sp-depth"  id="spDepth">0m</div>
+    <div class="sp-zone"   id="spZone">유광층</div>
+    <div class="sp-row"><span class="sp-icon">🌡</span><span id="spTemp">25°C</span></div>
+    <div class="sp-row"><span class="sp-icon">⚖️</span><span id="spPress">1기압</span></div>
+    <div class="sp-divider"></div>
+    <div class="sp-label">발견한 생물</div>
+    <div class="sp-catch"  id="spCatch">0 / 8종</div>
+    <button class="sp-dogan-btn" id="doganBtn">📖 도감</button>
+  </div>
+
+  <!-- 정보 카드 -->
+  <div id="infoCard">
+    <div class="ic-close" id="icClose">✕</div>
+    <div class="ic-badge" id="icBadge"></div>
+    <div class="ic-title" id="icTitle"></div>
+    <div class="ic-meta"  id="icMeta"></div>
+    <div class="ic-desc"  id="icDesc"></div>
+    <div class="ic-facts" id="icFacts"></div>
+  </div>
+
+  <!-- 이벤트 배너 -->
+  <div id="eventBanner">
+    <div class="eb-icon"  id="ebIcon"></div>
+    <div class="eb-title" id="ebTitle"></div>
+    <div class="eb-desc"  id="ebDesc"></div>
+  </div>
+
+  <!-- 수심대 토스트 -->
+  <div id="zoneToast">
+    <div class="zt-icon"  id="ztIcon"></div>
+    <div class="zt-name"  id="ztName"></div>
+    <div class="zt-range" id="ztRange"></div>
+  </div>
+
+  <!-- 생물 발견 토스트 -->
+  <div id="discoverToast">
+    <div class="dt-icon" id="dtIcon"></div>
+    <div class="dt-text" id="dtText"></div>
+  </div>
+
+  <!-- 도감 패널 -->
+  <div id="doganPanel">
+    <div class="dogan-header">
+      <span>📖 발견 도감</span>
+      <button id="doganClose">✕</button>
+    </div>
+    <div class="dogan-progress">
+      <div class="dogan-prog-bar">
+        <div class="dogan-prog-fill" id="doganProgFill"></div>
+      </div>
+      <div class="dogan-prog-text" id="doganProgText">0 / 8종 발견</div>
+    </div>
+    <div id="doganGrid"></div>
+  </div>
+
+  <!-- 생물 상세 팝업 -->
+  <div id="creaturePopup">
+    <div class="cp-overlay" id="cpOverlay"></div>
+    <div class="cp-modal">
+      <button class="cp-close" id="cpClose">✕</button>
+      <div class="cp-img-wrap">
+        <img id="cpImg" src="" alt=""/>
+        <div class="cp-fallback" id="cpFallback"></div>
+        <div class="cp-badge"   id="cpBadge"></div>
+      </div>
+      <div class="cp-body">
+        <div class="cp-latin" id="cpLatin"></div>
+        <div class="cp-name"  id="cpName"></div>
+        <div class="cp-line"></div>
+        <div class="cp-desc"  id="cpDesc"></div>
+        <div class="cp-stats" id="cpStats"></div>
+        <div class="cp-tags"  id="cpTags"></div>
+        <div class="cp-new"   id="cpNew"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 최심부 도달 -->
+  <div id="deepestReach">
+    <div class="dr-icon">🏆</div>
+    <div class="dr-title" id="drTitle"></div>
+    <div class="dr-desc"  id="drDesc"></div>
+  </div>
+
+</div>
+<script src="explore.js"></script>
+</body>
+</html>

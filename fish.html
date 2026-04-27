@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>마리아나 해구 — 어류</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div class="site">
+
+  <nav>
+    <div class="nav-logo">M</div>
+    <div class="nav-links">
+      <a href="index.html">소개</a>
+      <a href="explore.html">탐험</a>
+      <a href="index.html#creatures">생물</a>
+      <a href="index.html#zones">연구</a>
+    </div>
+    <div class="nav-auth">
+      <a href="#">로그인</a><span class="nav-divider">|</span><a href="#">회원가입</a>
+    </div>
+  </nav>
+
+  <div class="sub-hero">
+    <div class="sub-hero-content">
+      <a href="index.html#creatures" class="breadcrumb">← 생물 목록으로</a>
+      <div class="sub-tag">Fish · 어류</div>
+      <h1 class="sub-title">어류</h1>
+      <p class="sub-desc">극한의 수압과 완전한 어둠 속에서 생존하도록 진화한 심해 물고기들.</p>
+    </div>
+  </div>
+
+  <div class="creature-grid" id="creatureGrid">
+    <div class="creature-card" data-idx="0">
+      <canvas></canvas><div class="creature-card-overlay"></div>
+      <div class="creature-info">
+        <div class="creature-name">스네일피쉬</div>
+        <div class="creature-name-divider"></div>
+        <div class="creature-desc">수심 8,336m에서 발견된 가장 깊은 곳의 척추동물. 압력에 적응한 유연한 몸을 가집니다.</div>
+        <div class="creature-depth">수심 6,000 ~ 8,336m</div>
+      </div>
+    </div>
+    <div class="creature-card" data-idx="1">
+      <canvas></canvas><div class="creature-card-overlay"></div>
+      <div class="creature-info">
+        <div class="creature-name">심해아귀</div>
+        <div class="creature-name-divider"></div>
+        <div class="creature-desc">머리의 발광 기관(에스카)으로 먹이를 유인합니다. 암컷이 수컷보다 수십 배 크며, 수컷은 암컷 몸에 기생합니다.</div>
+        <div class="creature-depth">수심 200 ~ 2,000m</div>
+      </div>
+    </div>
+    <div class="creature-card" data-idx="2">
+      <canvas></canvas><div class="creature-card-overlay"></div>
+      <div class="creature-info">
+        <div class="creature-name">바이퍼피쉬</div>
+        <div class="creature-name-divider"></div>
+        <div class="creature-desc">몸길이의 절반에 달하는 거대한 이빨을 가진 심해어. 빠른 속도로 먹이를 낚아챕니다.</div>
+        <div class="creature-depth">수심 200 ~ 5,000m</div>
+      </div>
+    </div>
+    <div class="creature-card" data-idx="3">
+      <canvas></canvas><div class="creature-card-overlay"></div>
+      <div class="creature-info">
+        <div class="creature-name">드래곤피쉬</div>
+        <div class="creature-name-divider"></div>
+        <div class="creature-desc">턱 아래 발광 기관으로 먹이를 유인하는 심해어. 붉은 빛을 방출해 적외선 사냥을 합니다.</div>
+        <div class="creature-depth">수심 200 ~ 2,000m</div>
+      </div>
+    </div>
+    <div class="creature-card" data-idx="4">
+      <canvas></canvas><div class="creature-card-overlay"></div>
+      <div class="creature-info">
+        <div class="creature-name">배럴아이</div>
+        <div class="creature-name-divider"></div>
+        <div class="creature-desc">투명한 머리 속에 위를 향한 통형 눈을 가진 물고기. 희미한 빛도 감지할 수 있습니다.</div>
+        <div class="creature-depth">수심 400 ~ 2,500m</div>
+      </div>
+    </div>
+    <div class="creature-card" data-idx="5">
+      <canvas></canvas><div class="creature-card-overlay"></div>
+      <div class="creature-info">
+        <div class="creature-name">블랙스왈로어</div>
+        <div class="creature-name-divider"></div>
+        <div class="creature-desc">자기 몸의 10배 크기 먹이를 통째로 삼킬 수 있는 심해어. 위장이 풍선처럼 늘어납니다.</div>
+        <div class="creature-depth">수심 700 ~ 2,745m</div>
+      </div>
+    </div>
+    <div class="creature-card" data-idx="6">
+      <canvas></canvas><div class="creature-card-overlay"></div>
+      <div class="creature-info">
+        <div class="creature-name">굴퍼 장어</div>
+        <div class="creature-name-divider"></div>
+        <div class="creature-desc">거대한 입과 풍선처럼 늘어나는 위장을 가진 심해 뱀장어류. 꼬리에 발광 기관이 있습니다.</div>
+        <div class="creature-depth">수심 500 ~ 3,000m</div>
+      </div>
+    </div>
+    <div class="creature-card" data-idx="7">
+      <canvas></canvas><div class="creature-card-overlay"></div>
+      <div class="creature-info">
+        <div class="creature-name">초롱아귀</div>
+        <div class="creature-name-divider"></div>
+        <div class="creature-desc">몸에 발광기관이 줄지어 배열된 심해어. 독자적으로 빛을 만들어 어둠 속에서 의사소통합니다.</div>
+        <div class="creature-depth">수심 300 ~ 1,500m</div>
+      </div>
+    </div>
+    <div class="creature-card" data-idx="8">
+      <canvas></canvas><div class="creature-card-overlay"></div>
+      <div class="creature-info">
+        <div class="creature-name">유령상어</div>
+        <div class="creature-name-divider"></div>
+        <div class="creature-desc">연골어류로 심해 바닥을 유영하는 희귀 어류. 코에 전기 감지 기관을 가지고 있습니다.</div>
+        <div class="creature-depth">수심 200 ~ 2,000m</div>
+      </div>
+    </div>
+    <div class="creature-card" data-idx="9">
+      <canvas></canvas><div class="creature-card-overlay"></div>
+      <div class="creature-info">
+        <div class="creature-name">블랙드래곤피쉬</div>
+        <div class="creature-name-divider"></div>
+        <div class="creature-desc">암컷이 수컷보다 수십 배 크며 강력한 발광 능력을 가집니다. 수컷은 성체가 되면 소화 기관이 사라집니다.</div>
+        <div class="creature-depth">수심 200 ~ 1,000m</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub-nav-btns">
+    <span class="sub-nav-disabled">← 이전</span>
+    <a href="index.html#creatures" class="sub-nav-home">목록</a>
+    <a href="cephalopod.html" class="sub-nav-btn">두족류 →</a>
+  </div>
+
+  <footer>
+    <div class="footer-copy">© 2025 마리아나 해구 프로젝트.</div>
+    <div class="footer-links">
+      <a href="index.html">홈</a>
+      <a href="explore.html">탐험</a>
+    </div>
+  </footer>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>

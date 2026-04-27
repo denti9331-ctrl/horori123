@@ -1,110 +1,204 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>이호영 포트폴리오</title>
-
-<style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-  }
-
-  body {
-    background: linear-gradient(180deg, #000000, #0a0a23);
-    color: white;
-    overflow-x: hidden;
-  }
-
-  header {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  h1 {
-    font-size: 3rem;
-    letter-spacing: 2px;
-  }
-
-  p {
-    margin-top: 10px;
-    opacity: 0.7;
-  }
-
-  section {
-    padding: 100px 20px;
-    text-align: center;
-  }
-
-  .card {
-    background: rgba(255,255,255,0.05);
-    border-radius: 20px;
-    padding: 30px;
-    margin: 20px auto;
-    width: 300px;
-    transition: 0.3s;
-  }
-
-  .card:hover {
-    transform: translateY(-10px);
-    background: rgba(255,255,255,0.1);
-  }
-
-  .cursor {
-    width: 15px;
-    height: 15px;
-    border: 2px solid white;
-    border-radius: 50%;
-    position: fixed;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-  }
-</style>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>마리아나 해구</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
-
 <body>
+<div class="site">
 
-<div class="cursor"></div>
+  <nav>
+    <div class="nav-logo">M</div>
+    <div class="nav-links">
+      <a href="index.html">소개</a>
+      <a href="explore.html">탐험</a>
+      <a href="#creatures">생물</a>
+      <a href="#zones">연구</a>
+    </div>
+    <div class="nav-auth">
+      <a href="#">로그인</a>
+      <span class="nav-divider">|</span>
+      <a href="#">회원가입</a>
+    </div>
+  </nav>
 
-<header>
-  <h1>이호영</h1>
-  <p>Interactive Web Designer</p>
-</header>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg-img"></div>
+    <canvas class="hero-canvas" id="heroCanvas"></canvas>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-tag">지구 최심부 탐험</div>
+      <h1 class="hero-title">
+        <span>마리아나 해구</span>
+        <span class="accent">심연을 탐험하다</span>
+      </h1>
+      <div class="hero-divider"></div>
+      <p class="hero-desc">
+        태평양 서쪽에 위치한 지구에서 가장 깊은 곳<br>
+        수면 아래 11,034m, 수압은 대기압의 1,100배<br>
+        극한 환경 속에서도 생명은 찾아낸다
+      </p>
+      <div class="hero-stats">
+        <div>
+          <span class="stat-val">11,034m</span>
+          <div class="stat-label">최대 수심</div>
+        </div>
+        <div>
+          <span class="stat-val">1,100기압</span>
+          <div class="stat-label">최대 수압</div>
+        </div>
+        <div>
+          <span class="stat-val">1~4°C</span>
+          <div class="stat-label">평균 수온</div>
+        </div>
+      </div>
+      <a href="explore.html" class="hero-btn">탐험 시작하기</a>
+    </div>
 
-<section>
-  <h2>About Me</h2>
-  <div class="card">
-    <p>인터랙티브 웹과 감성적인 디자인을 좋아합니다.<br>
-    사용자 경험을 중요하게 생각하며 다양한 실험을 합니다.</p>
+    <!-- ★ 물고기 여기에 삽입 ★ -->
+    <div id="heroFish" aria-hidden="true"></div>
+
+  </section>
+
+  <!-- UNDERWATER -->
+  <section class="section-underwater" id="creatures">
+    <div class="section-label">심해 생물</div>
+    <h2 class="section-title">Underwater.</h2>
+    <div class="section-divider"></div>
+    <p class="section-desc">
+      빛 한 줄기 닿지 않는 어둠 속, 마리아나 해구에는 놀라운 생명체들이 살아가고 있습니다<br>
+      종류를 클릭하면 해당 생물들을 만나볼 수 있습니다
+    </p>
+  </section>
+
+  <!-- CATEGORY GRID -->
+  <div class="category-grid">
+
+    <a href="fish.html" class="category-card">
+      <canvas id="cc1"></canvas>
+      <div class="category-overlay"></div>
+      <div class="category-info">
+        <div class="category-tag">10종 수록</div>
+        <div class="category-name">어류</div>
+        <div class="category-sub">Fish</div>
+        <div class="category-divider"></div>
+        <div class="category-desc">스네일피쉬, 심해아귀, 바이퍼피쉬 등</div>
+      </div>
+    </a>
+
+    <a href="cephalopod.html" class="category-card">
+      <canvas id="cc2"></canvas>
+      <div class="category-overlay"></div>
+      <div class="category-info">
+        <div class="category-tag">10종 수록</div>
+        <div class="category-name">두족류 · 연체동물</div>
+        <div class="category-sub">Cephalopods</div>
+        <div class="category-divider"></div>
+        <div class="category-desc">뱀파이어 오징어, 덤보 문어, 대왕오징어 등</div>
+      </div>
+    </a>
+
+    <a href="crustacean.html" class="category-card">
+      <canvas id="cc3"></canvas>
+      <div class="category-overlay"></div>
+      <div class="category-info">
+        <div class="category-tag">10종 수록</div>
+        <div class="category-name">갑각류</div>
+        <div class="category-sub">Crustaceans</div>
+        <div class="category-divider"></div>
+        <div class="category-desc">암피포다, 자이언트 아이소포드, 코페포다 등</div>
+      </div>
+    </a>
+
+    <a href="cnidarian.html" class="category-card">
+      <canvas id="cc4"></canvas>
+      <div class="category-overlay"></div>
+      <div class="category-info">
+        <div class="category-tag">10종 수록</div>
+        <div class="category-name">자포동물 · 해파리류</div>
+        <div class="category-sub">Cnidarians</div>
+        <div class="category-divider"></div>
+        <div class="category-desc">심해 해파리, 관해파리, 빗해파리 등</div>
+      </div>
+    </a>
+
+    <a href="worm.html" class="category-card">
+      <canvas id="cc5"></canvas>
+      <div class="category-overlay"></div>
+      <div class="category-info">
+        <div class="category-tag">10종 수록</div>
+        <div class="category-name">환형동물 · 극피동물</div>
+        <div class="category-sub">Worms & Echinoderms</div>
+        <div class="category-divider"></div>
+        <div class="category-desc">관벌레, 좀비 벌레, 심해 해삼 등</div>
+      </div>
+    </a>
+
+    <a href="microbe.html" class="category-card">
+      <canvas id="cc6"></canvas>
+      <div class="category-overlay"></div>
+      <div class="category-info">
+        <div class="category-tag">10종 수록</div>
+        <div class="category-name">미생물 · 원시생물</div>
+        <div class="category-sub">Microorganisms</div>
+        <div class="category-divider"></div>
+        <div class="category-desc">제노피오포라, 고세균, 황화박테리아 등</div>
+      </div>
+    </a>
+
   </div>
-</section>
 
-<section>
-  <h2>Skills</h2>
-  <div class="card">HTML / CSS / JavaScript</div>
-  <div class="card">3D Modeling (Blender)</div>
-  <div class="card">UI/UX Design</div>
-</section>
+  <div class="view-all-wrap">
+    <a href="#" class="view-all">모든 생물 보기 &rsaquo;</a>
+  </div>
 
-<section>
-  <h2>Contact</h2>
-  <div class="card">Instagram: lhy_0320</div>
-</section>
+  <!-- DEPTH ZONES -->
+  <div class="depth-zones" id="zones">
+    <div class="zones-title">수심대별 구분</div>
+    <div class="zones-list">
+      <div class="zone-item" style="background:rgba(10,60,120,0.25);">
+        <div class="zone-depth">0 – 200m</div>
+        <div class="zone-name">유광층</div>
+        <div class="zone-temp">20~27°C</div>
+      </div>
+      <div class="zone-item" style="background:rgba(5,40,90,0.25);">
+        <div class="zone-depth">200 – 1,000m</div>
+        <div class="zone-name">박광층</div>
+        <div class="zone-temp">4~20°C</div>
+      </div>
+      <div class="zone-item" style="background:rgba(3,25,60,0.35);">
+        <div class="zone-depth">1,000 – 4,000m</div>
+        <div class="zone-name">심해대</div>
+        <div class="zone-temp">2~4°C</div>
+      </div>
+      <div class="zone-item" style="background:rgba(1,12,35,0.45);">
+        <div class="zone-depth">4,000 – 6,000m</div>
+        <div class="zone-name">초심해대</div>
+        <div class="zone-temp">1~3°C</div>
+      </div>
+      <div class="zone-item" style="background:rgba(0,5,18,0.6);">
+        <div class="zone-depth">6,000m+</div>
+        <div class="zone-name">해구대</div>
+        <div class="zone-temp">1~2°C</div>
+      </div>
+    </div>
+  </div>
 
-<script>
-const cursor = document.querySelector(".cursor");
+  <footer>
+    <div class="footer-copy">© 2025 마리아나 해구 프로젝트 탐험은 계속된다</div>
+    <div class="footer-links">
+      <a href="index.html">소개</a>
+      <a href="explore.html">탐험</a>
+      <a href="#creatures">생물</a>
+      <a href="#zones">연구</a>
+    </div>
+  </footer>
 
-document.addEventListener("mousemove", (e) => {
-  cursor.style.left = e.clientX + "px";
-  cursor.style.top = e.clientY + "px";
-});
-</script>
-
+</div>
+<script src="script.js"></script>
+<script src="fish-inject.js"></script>
 </body>
 </html>
